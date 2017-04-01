@@ -6,7 +6,7 @@ const easeOutExpo = BezierEasing(0.19, 1, 0.22, 1)
 
 /**
  * Animation scroll
- * @param {string} selector DOM Selector
+ * @param {object} target HTMLElement
  * @param {number} [during=100] (Optional) Scroll during
  */
 function scrollTo (target, during = 20) {

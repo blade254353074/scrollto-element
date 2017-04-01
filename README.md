@@ -9,6 +9,8 @@ A simple animated scroll to element function.
 
 ```bash
 npm install scrollto-element --save
+// or
+yarn add scrollto-element
 ```
 
 ## Usage
