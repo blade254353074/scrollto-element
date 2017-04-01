@@ -2,7 +2,7 @@
   "name": "scrollto-element",
   "version": "1.0.0",
   "description": "A simple animated scroll to element function.",
-  "main": "dist/scrollto-element.js",
+  "main": "dist/scrollto-element.min.js",
   "module": "src/scrollto-element.js",
   "scripts": {
     "clean": "rimraf dist/*",

@@ -24,11 +24,12 @@ import scrollToElement from 'scrollto-element'
 ```javascript
 import scrollToElement from 'scrollto-element'
 
-scrollToElement('#J_ScrollToMe')
-scrollToElement('#J_ScrollToMe', 300)
-// or
+scrollToElement(document.querySelector('#foobar'))
+scrollToElement(element, 300)
+
+// advanced
 scrollToElement({
-  selector: '#J_ScrollToMe',
+  element: document.querySelector('#foobar'),
   bezier: [0.19, 1, 0.22, 1],
   duration: 3000,
   then () {
