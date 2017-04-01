@@ -16,21 +16,21 @@ yarn add scrollto-element
 ## Usage
 
 ```javascript
-const scrollToElement = require('scrollto-element')
+const scrolltoElement = require('scrollto-element')
 // or ES2015+
-import scrollToElement from 'scrollto-element'
+import scrolltoElement from 'scrollto-element'
 ```
 
 ## Example
 
 ```javascript
-import scrollToElement from 'scrollto-element'
+import scrolltoElement from 'scrollto-element'
 
-scrollToElement(document.querySelector('#foobar'))
-scrollToElement(element, 300)
+scrolltoElement(document.querySelector('#foobar'))
+scrolltoElement(element, 300)
 
 // advanced
-scrollToElement({
+scrolltoElement({
   element: document.querySelector('#foobar'),
   bezier: [0.19, 1, 0.22, 1],
   duration: 3000,
