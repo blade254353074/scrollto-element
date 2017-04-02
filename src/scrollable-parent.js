@@ -3,7 +3,7 @@ const overflowRegexp = /(auto|scroll)/
 function parents (node, result = []) {
   const parent = node.parentNode
 
-  if (parent === null) return result
+  if (parent === null || parent.nodeName === 'HTML') return result
   return parents(parent, result.concat(parent))
 }
 
