@@ -12,7 +12,7 @@ const easeOutExpo = BezierEasing(0.19, 1, 0.22, 1)
 function scrollTo (target, during = 20) {
   if (!isElement(target)) throw new Error('The first argument must be HTMLElement.')
 
-  let start = 0
+  let start = null
   const parent = scrollableParent(target)
   const currentScrollTop = parent.scrollTop
   const parentOffsetTop = parent.offsetTop
@@ -26,13 +26,15 @@ function scrollTo (target, during = 20) {
   }
   const delta = targetScrollTop - currentScrollTop
 
-  function _run () {
-    start++
-    const offset = easeOutExpo(start / during) * delta
+  function _run (timestamp) {
+    if (start === null) (start = timestamp)
+    const progress = timestamp - start
+    const offset = easeOutExpo(progress / during) * delta
     parent.scrollTop = currentScrollTop + offset
-    if (start < during) raf(_run)
+
+    if (progress < during) raf(_run)
   }
-  _run()
+  raf(_run)
 }
 
 function isElement (input) {
