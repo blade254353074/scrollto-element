@@ -1,4 +1,7 @@
-# scrollto-element [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+# scrollto-element
+
+[![npm version](https://badge.fury.io/js/scrollto-element.svg)](https://badge.fury.io/js/scrollto-element)
+[![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 A simple animated scroll to element function.
 
@@ -29,7 +32,7 @@ import scrolltoElement from 'scrollto-element'
 scrolltoElement(document.querySelector('#foobar'))
 scrolltoElement(element, 300)
 
-// advanced
+// advanced (NOT DONE YET)
 scrolltoElement({
   element: document.querySelector('#foobar'),
   bezier: [0.19, 1, 0.22, 1],
