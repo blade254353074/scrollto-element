@@ -9,7 +9,7 @@ const easeOutExpo = BezierEasing(0.19, 1, 0.22, 1)
  * @param {object} target HTMLElement
  * @param {number} [during=100] (Optional) Scroll during
  */
-function scrollTo (target, during = 20) {
+function scrollTo (target, during = 100) {
   if (!isElement(target)) throw new Error('The first argument must be HTMLElement.')
 
   let start = null
