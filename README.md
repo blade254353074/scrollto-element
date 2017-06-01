@@ -32,16 +32,21 @@ import scrolltoElement from 'scrollto-element'
 scrolltoElement(document.querySelector('#foobar'))
 scrolltoElement(element, 300)
 
-// advanced (NOT DONE YET)
+// advanced
 scrolltoElement({
   element: document.querySelector('#foobar'),
-  bezier: [0.19, 1, 0.22, 1],
-  duration: 3000,
+  offset: -100, // default is 0
+  bezier: [0.19, 1, 0.22, 1], // default is [0.19, 1, 0.22, 1]
+  duration: 3000, // default is 100
   then () {
     console.log('Finished~')
   }
 })
 ```
+
+> offset means scroll to (target element + offset).  
+When offset is a positive number, view will scroll through the target.  
+When offset is a negative number, view will scroll to near the target.
 
 ## See also
 
