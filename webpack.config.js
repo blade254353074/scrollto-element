@@ -7,7 +7,7 @@ module.exports = {
   entry: './index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'scrollto-element.min.js',
+    filename: 'scrollto-element.js',
     library: 'scrolltoElement',
     libraryTarget: 'umd'
   },
