@@ -56,7 +56,7 @@ function scrollTo (target, during = 100) {
     if (start === null) (start = timestamp)
     const progress = timestamp - start
     const offset = bezier(progress / during) * delta
-    parent.scrollTop = currentScrollTop + offset
+    parent.scrollTop = Math.round(currentScrollTop + offset)
 
     progress < during ? raf(_run) : then()
   }
